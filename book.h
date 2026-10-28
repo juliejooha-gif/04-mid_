@@ -7,6 +7,8 @@
 
 namespace LeeJuha2630018
 
+
+
 class book
 {
     std::string title;
