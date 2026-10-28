@@ -66,6 +66,7 @@ class book
     int getID() const {return id;}
     int getPrice() const {return price;}
 
+<<<<<<< HEAD
     book operator++(){*this->return book{title, id, ++price};}
     book operator++(int)
     {
@@ -73,6 +74,34 @@ class book
         price++;
         return temp;            
     }
+=======
+    //book operator++(){*this->return book{title, id, ++price};}
+
+    book operator++()
+    {
+        ++price;
+         return *this;
+    }
+
+
+    // book operator++(int)
+    // {
+    //     book temp{title, id, price};
+    //     price++;
+    //     return temp;            
+    // }
+
+    book operator++(int)
+    {
+         book temp{*this};
+        price++;
+        return temp; 
+    }           
+  
+
+
+
+>>>>>>> 327581d (think)
     friend bool operator==(const book& b1, const book& b2)
     {
         return b1.id == b2.id && b1.price == b2.price;
@@ -83,11 +112,34 @@ class book
     }
 
     // 1-5. 복합할당연산자 +=를 구현하세요. 매개변수는 int, price에 매개변수를 더해줍니다. this를 이용하세요.
+<<<<<<< HEAD
     friend int operator+(const price& p1, const price& p2)
     {
         return p1.price + p2.price;
     }
 };
+=======
+//     friend int operator+(const price& p1, const price& p2)
+//     {
+//         return p1.price + p2.price;
+//     }
+// };
+
+book& operator+=(int p)
+{
+    price += p;
+    return *this;
+}
+
+friend bool operator==(const book& b1, const book& b2)
+    {
+        return b1.id == b2.id && b1.price == b2.price;
+    }
+    friend int operator+(const book& b1, const book& b2)
+    {
+        return b1.price + b2.price;
+    }
+>>>>>>> 327581d (think)
 
     
      

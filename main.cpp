@@ -1,11 +1,37 @@
+<<<<<<< HEAD
 #include "book.h"
+=======
+//#include "book.h"
+>>>>>>> 327581d (think)
 #include "bookGroup.h"
 
 int main()
 {
+<<<<<<< HEAD
     book a1{1};
     book a2{2};
     book a3{3};
+=======
+    using namespace LeeJuha2630018;
+
+    book b1{"title1", 1, 10000};
+    book a2{"title2", 2, 20000};
+    book a3{"title3", 3, 30000};
+
+    bookGroup* bgPtr{ new bookGroup{"book group name"} };
+
+    bgPtr->addBook(b1);
+    bgPtr->addBook(b2);
+    bgPtr->addBook(b3);
+
+    bgPtr-> print();
+
+
+
+    delete bgPtr;
+
+    return 0;
+>>>>>>> 327581d (think)
 
     
     //3-2-2. bookGroup형을 가리키는 포인터변수를 선언하고 원하는 값으로 초기화하여 동적으로 할당합니다.  
@@ -16,6 +42,7 @@ int main()
 
 
     
+<<<<<<< HEAD
     parBook(Book=b){p+=1};
     parRef(&Book){};
     parPtr(*Ref){};
@@ -24,6 +51,16 @@ int main()
     delete *bookGroup
 
     return 0;
+=======
+    // parBook(Book=b){p+=1};
+    // parRef(&Book){};
+    // parPtr(*Ref){};
+
+    // void print(*print)
+    // delete *bookGroup
+
+    // return 0;
+>>>>>>> 327581d (think)
 }
 
 
