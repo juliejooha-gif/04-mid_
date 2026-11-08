@@ -1,13 +1,24 @@
-<<<<<<< HEAD
 #include "book.h"
-=======
-//#include "book.h"
->>>>>>> 327581d (think)
 #include "bookGroup.h"
+
+
+namespace LeeJuha2630018
+{
+void parVal(book b){b+=1000;}
+    void parRef(book& r){r+=1000;}
+    void parPtr(book* p){*p+=1000;}
+    book retVal(book b){b+=1000;return b;}
+    book& retRef(book& r){r+=1000; return r;}
+    book* retPtr(book* p){*p+=1000;return p;}
+}
 
 int main()
 {
-<<<<<<< HEAD
+    using namespace LeeJuha2630018;
+    book 
+    
+
+
     book a1{1};
     book a2{2};
     book a3{3};
@@ -41,7 +52,6 @@ int main()
    // 3-2-5. bookGroup형을 가리키는 포인터변수에서 동적으로 할당한 메모리를 해제합니다. 
 
     
-<<<<<<< HEAD
     parBook(Book=b){p+=1};
     parRef(&Book){};
     parPtr(*Ref){};
@@ -50,16 +60,6 @@ int main()
     delete *bookGroup
 
     return 0;
-=======
-    // parBook(Book=b){p+=1};
-    // parRef(&Book){};
-    // parPtr(*Ref){};
-
-    // void print(*print)
-    // delete *bookGroup
-
-    // return 0;
->>>>>>> 327581d (think)
 }
 
 
