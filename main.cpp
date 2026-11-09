@@ -15,7 +15,20 @@ void parVal(book b){b+=1000;}
 int main()
 {
     using namespace LeeJuha2630018;
-    book 
+    book b{"title1", 1, 10000}; std::cout << b;
+    parVal(b); std::cout << b;
+    book& r{b}; std::cout << r;
+    parRef(r); std::cout << r;
+    book* p{&b}; std::cout << *p;
+    parPtr(p); std::cout << *p;
+    std::cout << std::endl;
+
+    b = book{"title2", 2, 20000};
+    std::cout << b;
+    std::cout << retVal(b);
+    std::cout << r;
+    std::cout << retRef(r);
+    
     
 
 
